@@ -1,2 +1,6 @@
+saveExact: true
+engineStrict: true
+savePrefix: ''
+
 allowBuilds:
   lefthook: true
