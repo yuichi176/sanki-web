@@ -1,111 +1,115 @@
 @import "tailwindcss";
 
+@theme inline {
+  --color-brand: var(--sanki-green);
+
+  --color-white-alpha-5: var(--white-alpha-5);
+  --color-white-alpha-10: var(--white-alpha-10);
+  --color-white-alpha-20: var(--white-alpha-20);
+  --color-white-alpha-30: var(--white-alpha-30);
+  --color-white-alpha-40: var(--white-alpha-40);
+  --color-white-alpha-50: var(--white-alpha-50);
+  --color-white-alpha-60: var(--white-alpha-60);
+  --color-white-alpha-70: var(--white-alpha-70);
+  --color-white-alpha-80: var(--white-alpha-80);
+  --color-white-alpha-90: var(--white-alpha-90);
+  --color-white: var(--white);
+
+  --color-black-alpha-5: var(--black-alpha-5);
+  --color-black-alpha-10: var(--black-alpha-10);
+  --color-black-alpha-20: var(--black-alpha-20);
+  --color-black-alpha-30: var(--black-alpha-30);
+  --color-black-alpha-40: var(--black-alpha-40);
+  --color-black-alpha-50: var(--black-alpha-50);
+  --color-black-alpha-60: var(--black-alpha-60);
+  --color-black-alpha-70: var(--black-alpha-70);
+  --color-black-alpha-80: var(--black-alpha-80);
+  --color-black-alpha-90: var(--black-alpha-90);
+  --color-black: var(--black);
+
+  --color-gray-50: var(--gray-50);
+  --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-300: var(--gray-300);
+  --color-gray-400: var(--gray-400);
+  --color-gray-500: var(--gray-500);
+  --color-gray-600: var(--gray-600);
+  --color-gray-700: var(--gray-700);
+  --color-gray-800: var(--gray-800);
+  --color-gray-900: var(--gray-900);
+  --color-gray-950: var(--gray-950);
+
+  --color-green-50: var(--green-50);
+  --color-green-100: var(--green-100);
+  --color-green-200: var(--green-200);
+  --color-green-300: var(--green-300);
+  --color-green-400: var(--green-400);
+  --color-green-500: var(--green-500);
+  --color-green-600: var(--green-600);
+  --color-green-700: var(--green-700);
+  --color-green-800: var(--green-800);
+  --color-green-900: var(--green-900);
+  --color-green-950: var(--green-950);
+}
+
+/** typography **/
+@theme {
+  --font-noto-sans-jp: 'Noto Sans JP', sans-serif;
+}
+
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  /*  Primitive colors */
+  --sanki-green: oklch(0.5697 0.1188 140.25);
+  --white-alpha-5: oklch(1 0 0 / .05);
+  --white-alpha-10: oklch(1 0 0 / .10);
+  --white-alpha-20: oklch(1 0 0 / .20);
+  --white-alpha-30: oklch(1 0 0 / .30);
+  --white-alpha-40: oklch(1 0 0 / .40);
+  --white-alpha-50: oklch(1 0 0 / .50);
+  --white-alpha-60: oklch(1 0 0 / .60);
+  --white-alpha-70: oklch(1 0 0 / .70);
+  --white-alpha-80: oklch(1 0 0 / .80);
+  --white-alpha-90: oklch(1 0 0 / .90);
+  --white: oklch(1 0 0);
+  --black-alpha-5: oklch(0 0 0 / .05);
+  --black-alpha-10: oklch(0 0 0 / .10);
+  --black-alpha-20: oklch(0 0 0 / .20);
+  --black-alpha-30: oklch(0 0 0 / .30);
+  --black-alpha-40: oklch(0 0 0 / .40);
+  --black-alpha-50: oklch(0 0 0 / .50);
+  --black-alpha-60: oklch(0 0 0 / .60);
+  --black-alpha-70: oklch(0 0 0 / .70);
+  --black-alpha-80: oklch(0 0 0 / .80);
+  --black-alpha-90: oklch(0 0 0 / .90);
+  --black: oklch(0 0 0);
+  --gray-50: oklch(0.99 0 0);
+  --gray-100: oklch(0.97 0 0);
+  --gray-200: oklch(0.92 0 0);
+  --gray-300: oklch(0.86 0 0);
+  --gray-400: oklch(0.77 0 0);
+  --gray-500: oklch(0.67 0 0);
+  --gray-600: oklch(0.55 0 0);
+  --gray-700: oklch(0.41 0 0);
+  --gray-800: oklch(0.26 0 0);
+  --gray-900: oklch(0.11 0 0);
+  --gray-950: oklch(0.05 0 0);
+  --green-50: oklch(0.99 0.0048 140.25);
+  --green-100: oklch(0.97 0.0122 140.25);
+  --green-200: oklch(0.92 0.0338 140.25);
+  --green-300: oklch(0.86 0.0592 140.25);
+  --green-400: oklch(0.77 0.085 140.25);
+  --green-500: oklch(0.67 0.1072 140.25);
+  --green-600: oklch(0.55 0.1201 140.25);
+  --green-700: oklch(0.41 0.1171 140.25);
+  --green-800: oklch(0.26 0.0829 140.25);
+  --green-900: oklch(0.11 0.0346 140.25);
+  --green-950: oklch(0.05 0.0161 140.25);
+}
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
-
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
+@layer base {
+  body {
+    @apply bg-white text-gray-900;
+    font: var(--font-noto-sans-jp);
+    font-feature-settings: "palt" 1;
   }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow: rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
-}
-
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
-
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
-}
-
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
 }
