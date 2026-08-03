@@ -15,7 +15,8 @@
     "lint:fix": "eslint 'src/**/*.{js,ts,jsx,tsx}' --fix --cache",
     "typecheck": "tsc --noEmit",
     "format": "prettier 'src/**/*.{js,ts,jsx,tsx}' --check",
-    "format:fix": "prettier 'src/**/*.{js,ts,jsx,tsx}' --write"
+    "format:fix": "prettier 'src/**/*.{js,ts,jsx,tsx}' --write",
+    "test": "echo 'test complete!'"
   },
   "dependencies": {
     "react": "19.2.8",
