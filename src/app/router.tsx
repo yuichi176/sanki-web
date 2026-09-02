@@ -1,13 +1,13 @@
 import { createBrowserRouter } from 'react-router'
 
 import { AppLayout } from './app-layout'
-import { CareersPage } from '../pages/careers-page'
-import { CompanyPage } from '../pages/company-page'
-import { HomePage } from '../pages/home-page'
-import { NewsPage } from '../pages/news-page'
-import { NorimenCraftsmanPage } from '../pages/norimen-craftsman-page'
-import { NotFoundPage } from '../pages/not-found-page'
-import { ServicesPage } from '../pages/services-page'
+import { CareersPage } from '../pages/careers/careers-page'
+import { CompanyPage } from '../pages/company/company-page'
+import { HomePage } from '../pages/home/home-page'
+import { NewsPage } from '../pages/news/news-page'
+import { NorimenCraftsmanPage } from '../pages/norimen-craftsman/norimen-craftsman-page'
+import { NotFoundPage } from '../pages/not-found/not-found-page'
+import { ServicesPage } from '../pages/services/services-page'
 
 export const router = createBrowserRouter([
   {
