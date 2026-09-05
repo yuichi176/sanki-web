@@ -47,7 +47,7 @@ function SectionHeading({ children, moreTo }: SectionHeadingProps) {
 
 export function HomePage() {
   return (
-    <main>
+    <>
       <section className="relative isolate flex min-h-155 items-center justify-center overflow-hidden bg-gray-900 lg:min-h-190">
         <img
           alt="法面の施工現場"
@@ -110,6 +110,6 @@ export function HomePage() {
           </div>
         </div>
       </section>
-    </main>
+    </>
   )
 }

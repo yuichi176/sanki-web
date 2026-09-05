@@ -7,7 +7,9 @@ export function AppLayout() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
       <SiteHeader />
-      <Outlet />
+      <main id="main-content">
+        <Outlet />
+      </main>
       <SiteFooter />
     </div>
   )
