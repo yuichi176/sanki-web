@@ -3,7 +3,9 @@ import { Link } from 'react-router'
 import arrowGreen from '../../assets/icons/arrow-green.svg'
 import arrowWhite from '../../assets/icons/arrow-white.svg'
 import imagePlaceholder from '../../assets/icons/image-placeholder.svg'
-import heroImage from './assets/hero.png'
+import heroImage1368 from './assets/hero-1368.webp'
+import heroImage2048 from './assets/hero-2048.webp'
+import heroImage768 from './assets/hero-768.webp'
 
 interface NewsItem {
   readonly date: string
@@ -52,7 +54,10 @@ export function HomePage() {
         <img
           alt="法面の施工現場"
           className="absolute inset-0 -z-20 size-full object-cover"
-          src={heroImage}
+          fetchPriority="high"
+          sizes="100vw"
+          src={heroImage1368}
+          srcSet={`${heroImage768} 768w, ${heroImage1368} 1368w, ${heroImage2048} 2048w`}
         />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(0,0,0,0.25)_0%,rgba(0,0,0,0.35)_52%,rgba(0,0,0,0.7)_100%)]" />
         <div className="mx-auto w-full max-w-2xl px-8 text-center text-white">
