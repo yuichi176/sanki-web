@@ -1,19 +1,7 @@
 import { NavLink } from 'react-router'
 
+import { navigationItems } from '../app/navigation'
 import companyMark from '../assets/company-mark.png'
-
-interface FooterNavigationItem {
-  readonly label: string
-  readonly to: string
-}
-
-const footerNavigationItems: readonly FooterNavigationItem[] = [
-  { label: 'お知らせ', to: '/news' },
-  { label: '事業内容', to: '/services' },
-  { label: '職人の仕事', to: '/norimen-craftsman' },
-  { label: '採用情報', to: '/careers' },
-  { label: '会社概要', to: '/company' },
-]
 
 export function SiteFooter() {
   return (
@@ -40,7 +28,7 @@ export function SiteFooter() {
           </div>
           <nav aria-label="フッターナビゲーション">
             <ul className="space-y-3 text-sm text-gray-600">
-              {footerNavigationItems.map(({ label, to }) => (
+              {navigationItems.map(({ label, to }) => (
                 <li key={to}>
                   <NavLink className="transition-colors hover:text-brand" to={to}>
                     {label}

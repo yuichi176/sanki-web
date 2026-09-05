@@ -1,19 +1,7 @@
 import { NavLink } from 'react-router'
 
+import { navigationItems } from '../app/navigation'
 import companyMark from '../assets/company-mark.png'
-
-interface NavigationItem {
-  readonly label: string
-  readonly to: string
-}
-
-const navigationItems: readonly NavigationItem[] = [
-  { label: 'お知らせ', to: '/news' },
-  { label: '事業内容', to: '/services' },
-  { label: '職人の仕事', to: '/norimen-craftsman' },
-  { label: '採用情報', to: '/careers' },
-  { label: '会社概要', to: '/company' },
-]
 
 export function SiteHeader() {
   return (
