@@ -3,6 +3,7 @@ import vegetationSubstrate02 from './assets/vegetation-substrate-02.webp'
 import vegetationSubstrate03 from './assets/vegetation-substrate-03.webp'
 import vegetationSubstrate04 from './assets/vegetation-substrate-04.webp'
 import vegetationSubstrate08 from './assets/vegetation-substrate-08.webp'
+import { SectionHeading } from '../section-heading'
 
 interface ProcessStep {
   readonly image: string
@@ -15,15 +16,6 @@ const processSteps: readonly ProcessStep[] = [
   { title: '植生基材注入', image: vegetationSubstrate02 },
   { title: '完成', image: vegetationSubstrate08 },
 ]
-
-function SectionHeading({ children }: Readonly<{ children: string }>) {
-  return (
-    <h2 className="flex items-center gap-4 text-xl leading-8 font-bold text-gray-800">
-      <span aria-hidden="true" className="h-6 w-1 bg-brand" />
-      {children}
-    </h2>
-  )
-}
 
 export function VegetationSubstrateInjectionPage() {
   return (
@@ -42,7 +34,7 @@ export function VegetationSubstrateInjectionPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
-        <SectionHeading>植生基材注入工法とは</SectionHeading>
+        <SectionHeading size="section">植生基材注入工法とは</SectionHeading>
         <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1.74fr)_minmax(340px,1fr)] lg:gap-12">
           <div className="space-y-4 text-sm leading-7 text-gray-800">
             <p>
@@ -74,7 +66,7 @@ export function VegetationSubstrateInjectionPage() {
 
       <section className="bg-gray-100">
         <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
-          <SectionHeading>植生基材注入工法 工程</SectionHeading>
+          <SectionHeading size="section">植生基材注入工法 工程</SectionHeading>
           <ol className="mx-auto mt-10 grid max-w-220 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
             {processSteps.map((step, index) => (
               <li className="text-center" key={step.title}>

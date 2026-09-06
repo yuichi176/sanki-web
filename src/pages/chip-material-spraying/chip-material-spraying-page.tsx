@@ -6,6 +6,7 @@ import chipMaterial09 from './assets/chip-material-09.webp'
 import chipMaterial13 from './assets/chip-material-13.webp'
 import chipMaterial14 from './assets/chip-material-14.webp'
 import chipMaterial17 from './assets/chip-material-17.webp'
+import { SectionHeading } from '../section-heading'
 
 interface Feature {
   readonly description: string
@@ -47,15 +48,6 @@ const processSteps: readonly ProcessStep[] = [
   { title: 'チップ材吹付け', image: chipMaterial17 },
 ]
 
-function SectionHeading({ children }: Readonly<{ children: string }>) {
-  return (
-    <h2 className="flex items-center gap-4 text-xl leading-8 font-bold text-gray-800">
-      <span aria-hidden="true" className="h-6 w-1 bg-brand" />
-      {children}
-    </h2>
-  )
-}
-
 export function ChipMaterialSprayingPage() {
   return (
     <>
@@ -73,7 +65,7 @@ export function ChipMaterialSprayingPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
-        <SectionHeading>チップ材吹付工とは</SectionHeading>
+        <SectionHeading size="section">チップ材吹付工とは</SectionHeading>
         <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1.74fr)_minmax(340px,1fr)] lg:gap-12">
           <div className="space-y-4 text-sm leading-7 text-gray-800">
             <p>
@@ -107,7 +99,7 @@ export function ChipMaterialSprayingPage() {
 
       <section className="bg-gray-100">
         <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
-          <SectionHeading>チップ材吹付工 特長</SectionHeading>
+          <SectionHeading size="section">チップ材吹付工 特長</SectionHeading>
           <ol className="mt-8 border-t border-gray-200">
             {features.map((feature, index) => (
               <li
@@ -130,7 +122,7 @@ export function ChipMaterialSprayingPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
-        <SectionHeading>チップ材吹付工 工程</SectionHeading>
+        <SectionHeading size="section">チップ材吹付工 工程</SectionHeading>
         <ol className="mx-auto mt-8 grid max-w-220 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           {processSteps.map((step, index) => (
             <li className="text-center" key={step.title}>
@@ -149,7 +141,7 @@ export function ChipMaterialSprayingPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-14 lg:px-10 lg:pt-0">
-        <SectionHeading>チップ材吹付工 施工例</SectionHeading>
+        <SectionHeading size="section">チップ材吹付工 施工例</SectionHeading>
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           {[
             { image: chipMaterial04, label: '施工前' },
