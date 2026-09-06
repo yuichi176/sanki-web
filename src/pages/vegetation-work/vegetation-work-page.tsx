@@ -102,6 +102,7 @@ const vegetationMethods: readonly VegetationMethod[] = [
   },
   {
     name: '植生基材注入工法',
+    detailsTo: '/vegetation-substrate-injection',
     introduction:
       '粗目の植生袋を展張した後、液状化した客土・種子・特殊有機材を注入して充填する工法です。極めて急勾配な法面にも対応します。',
     geology: '土壌硬度23㎜以下の粘性土、27㎜以下の砂質土、礫質土、軟・硬岩、1：0.3より緩勾配',
