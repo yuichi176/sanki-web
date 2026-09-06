@@ -62,7 +62,7 @@ const structuralWorkMethods: readonly StructuralWorkMethod[] = [
       '金網を全面に張り付けた後、鉄筋を配筋して各枠の中心にガッテンダーユニットを設置し、配筋に沿ってモルタル吹付を行う。',
     application: '亀裂の多い岩盤法面や、早期に保護する必要がある法面等に用いる。',
     purpose: '法面表層部の崩落防止、多少の土圧を受けるおそれのある箇所の土留め、岩盤はく落防止',
-    hasDetails: true,
+    detailsTo: '/soilcrete',
     images: [soilcrete1, soilcrete2],
   },
   {
