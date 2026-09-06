@@ -1,3 +1,5 @@
+import { Link } from 'react-router'
+
 import arrowWhite from '../../assets/icons/arrow-white.svg'
 import groundAnchor1 from './assets/ground-anchor-1.webp'
 import groundAnchor2 from './assets/ground-anchor-2.webp'
@@ -14,6 +16,7 @@ import sprayedFrame2 from './assets/sprayed-frame-2.webp'
 
 interface StructuralWorkMethod {
   readonly application: string
+  readonly detailsTo?: string
   readonly hasDetails?: boolean
   readonly images?: readonly [string, string]
   readonly note?: string
@@ -43,7 +46,7 @@ const structuralWorkMethods: readonly StructuralWorkMethod[] = [
     application:
       '既設法面の経年の劣化、老朽化、背面空洞化により補強、補修が必要とされるのり面に用いられる。',
     purpose: '既設法面の補強、補修',
-    hasDetails: true,
+    detailsTo: '/slope-repair',
     images: [slopeRepair1, slopeRepair2],
   },
   {
@@ -117,7 +120,15 @@ function StructuralWorkMethodSection({
         {method.note ? (
           <p className="mt-3 text-[13px] leading-[22px] text-gray-500">※ {method.note}</p>
         ) : null}
-        {method.hasDetails ? (
+        {method.detailsTo ? (
+          <Link
+            className="mt-4 inline-flex items-center gap-2 bg-brand px-5 py-2.5 text-sm font-bold text-white"
+            to={method.detailsTo}
+          >
+            詳しく見る
+            <img alt="" className="size-4" height={16} src={arrowWhite} width={16} />
+          </Link>
+        ) : method.hasDetails ? (
           <button
             className="mt-4 inline-flex items-center gap-2 bg-brand px-5 py-2.5 text-sm font-bold text-white"
             type="button"
