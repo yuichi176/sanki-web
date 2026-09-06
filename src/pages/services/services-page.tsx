@@ -81,7 +81,10 @@ export function ServicesPage() {
     <main>
       <section className="border-b border-gray-200">
         <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
-          <SectionHeading>事業内容</SectionHeading>
+          <h1 className="flex items-center gap-4 text-2xl leading-9 font-bold text-gray-800">
+            <span aria-hidden="true" className="h-7 w-1 bg-brand" />
+            事業内容
+          </h1>
           <p className="mt-3 pl-5 text-sm text-gray-600">
             三気建設が手がける工事の種類・内容をご紹介します。
           </p>
@@ -89,7 +92,7 @@ export function ServicesPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-14 lg:px-10 lg:pb-16">
-        <h1 className="text-2xl leading-9 font-bold text-gray-800">法面保護工とは</h1>
+        <h2 className="text-2xl leading-9 font-bold text-gray-800">法面保護工とは</h2>
         <div className="mt-8 space-y-4 text-sm leading-7 text-gray-900">
           <p>
             人工的または自然発生的に形成された傾斜面を「法面（のりめん）」といいます。その「法面」を構造物や植物を利用し、保護する「法面保護工」を中心とした土木工事を行っています。
