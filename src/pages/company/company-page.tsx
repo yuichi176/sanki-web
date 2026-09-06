@@ -145,10 +145,6 @@ export function CompanyPage() {
                 <span aria-hidden="true">■</span>
                 <span>平成十三年、本社を岐阜県大野町へ移転</span>
               </li>
-              <li className="flex gap-3">
-                <span aria-hidden="true">■</span>
-                <span>従業員数：十六名（二〇二六年現在）</span>
-              </li>
             </ul>
           </div>
         </div>
