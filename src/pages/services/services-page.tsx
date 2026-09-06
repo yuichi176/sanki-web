@@ -1,3 +1,5 @@
+import { Link } from 'react-router'
+
 import arrowRight from './assets/arrow-right.svg'
 import norimenAfterImage from './assets/norimen-after.webp'
 import norimenBeforeImage from './assets/norimen-before.webp'
@@ -10,6 +12,7 @@ import { SectionHeading } from '../section-heading'
 
 interface WorkType {
   readonly description: string
+  readonly detailsTo?: string
   readonly image: string
   readonly name: string
   readonly hasDetails: boolean
@@ -21,6 +24,7 @@ const workTypes: readonly WorkType[] = [
     description: '緑化工法により法面を植物で覆い、侵食・風化を防止します。',
     image: service1Image,
     hasDetails: true,
+    detailsTo: '/vegetation-work',
   },
   {
     name: '構造物工',
@@ -55,7 +59,14 @@ function WorkCard({ workType }: Readonly<{ workType: WorkType }>) {
       <div className="flex min-h-48 flex-col p-6">
         <h3 className="text-xl leading-7 font-bold text-gray-800">{workType.name}</h3>
         <p className="mt-3 text-sm leading-[22px] text-gray-600">{workType.description}</p>
-        {workType.hasDetails ? (
+        {workType.detailsTo ? (
+          <Link
+            className="mt-auto bg-brand px-5 py-2.5 text-center text-sm font-bold text-white transition-colors hover:bg-green-700"
+            to={workType.detailsTo}
+          >
+            詳しく見る
+          </Link>
+        ) : workType.hasDetails ? (
           <button
             className="mt-auto bg-brand px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-green-700"
             type="button"
