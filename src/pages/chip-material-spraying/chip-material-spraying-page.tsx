@@ -52,13 +52,13 @@ export function ChipMaterialSprayingPage() {
   return (
     <>
       <section className="border-b border-gray-200">
-        <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
-          <p className="text-xs text-gray-600">事業内容 &gt; 植生工 &gt; チップ材吹付工</p>
+        <div className="mx-auto max-w-7xl px-6 py-10 lg:px-10 lg:py-14">
+          <p className="text-sm text-gray-600">事業内容 &gt; 植生工 &gt; チップ材吹付工</p>
           <h1 className="mt-4 flex items-center gap-4 text-2xl leading-9 font-bold text-gray-800">
             <span aria-hidden="true" className="h-7 w-1 bg-brand" />
             チップ材吹付工
           </h1>
-          <p className="mt-3 pl-5 text-[13px] leading-5 text-gray-600">
+          <p className="mt-3 pl-5 leading-5 text-gray-600">
             伐採木材を粉砕したチップ材を主体とした植生基材を吹き付ける工法です。
           </p>
         </div>
@@ -67,7 +67,7 @@ export function ChipMaterialSprayingPage() {
       <section className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
         <SectionHeading size="section">チップ材吹付工とは</SectionHeading>
         <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1.74fr)_minmax(340px,1fr)] lg:gap-12">
-          <div className="space-y-4 text-sm leading-7 text-gray-800">
+          <div className="space-y-4 leading-7 text-gray-800">
             <p>
               道路やダムを建設するにあたっては、多くの木が伐採されることとなります。これまでは伐採木の必要とされない部分を処分してきましたが、環境問題が重要視される現在では、資源として活用することが求められています。
             </p>
@@ -77,7 +77,7 @@ export function ChipMaterialSprayingPage() {
             <p>
               チップ材が豊富な有機物を法面に供給することで、土壌微生物の活性化と植物の安定した生育環境をつくります。
             </p>
-            <dl className="grid gap-3 pt-3 text-[13px] leading-[22px] sm:grid-cols-[auto_1fr] sm:gap-x-5">
+            <dl className="grid gap-3 pt-6 text-sm leading-[22px] sm:grid-cols-[auto_1fr] sm:gap-x-5">
               <dt className="font-bold text-green-800">適用地質条件</dt>
               <dd>
                 土壌硬度23㎜以下の粘性土、27㎜以下の砂質土、礫質土、軟・硬岩、1：0.5より緩勾配
@@ -110,10 +110,8 @@ export function ChipMaterialSprayingPage() {
                   {index + 1}
                 </span>
                 <div>
-                  <h3 className="text-[15px] leading-[22px] font-bold text-gray-800">
-                    {feature.title}
-                  </h3>
-                  <p className="mt-1.5 text-sm leading-6 text-gray-700">{feature.description}</p>
+                  <h3 className="leading-[22px] font-bold text-gray-800">{feature.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-gray-700">{feature.description}</p>
                 </div>
               </li>
             ))}
@@ -123,7 +121,7 @@ export function ChipMaterialSprayingPage() {
 
       <section className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
         <SectionHeading size="section">チップ材吹付工 工程</SectionHeading>
-        <ol className="mx-auto mt-8 grid max-w-220 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+        <ol className="mx-auto mt-16 grid max-w-220 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           {processSteps.map((step, index) => (
             <li className="text-center" key={step.title}>
               <img
@@ -142,7 +140,7 @@ export function ChipMaterialSprayingPage() {
 
       <section className="mx-auto max-w-7xl px-6 py-14 lg:px-10 lg:pt-0">
         <SectionHeading size="section">チップ材吹付工 施工例</SectionHeading>
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
+        <div className="mt-16 grid gap-4 md:grid-cols-3">
           {[
             { image: chipMaterial04, label: '施工前' },
             { image: chipMaterial09, label: '施工後 5ヶ月' },
@@ -154,7 +152,7 @@ export function ChipMaterialSprayingPage() {
                 className="aspect-[39/20] w-full rounded object-cover"
                 src={example.image}
               />
-              <figcaption className="mt-2 text-center text-xs text-gray-700">
+              <figcaption className="mt-2 text-center text-sm text-gray-700">
                 {example.label}
               </figcaption>
             </figure>

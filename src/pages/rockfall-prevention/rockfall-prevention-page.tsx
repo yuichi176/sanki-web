@@ -34,8 +34,8 @@ const rockfallPreventionMethods: readonly RockfallPreventionMethod[] = [
 function MethodDetail({ label, value }: Readonly<{ label: string; value: string }>) {
   return (
     <div>
-      <dt className="text-xs font-bold text-green-800">{label}</dt>
-      <dd className="mt-1 text-[13px] leading-[22px] text-neutral-950">{value}</dd>
+      <dt className="text-sm font-bold text-green-800">{label}</dt>
+      <dd className="mt-2 leading-6 text-gray-900">{value}</dd>
     </div>
   )
 }
@@ -45,21 +45,23 @@ function RockfallPreventionMethodSection({
   method,
 }: Readonly<{ index: number; method: RockfallPreventionMethod }>) {
   return (
-    <article className="grid gap-8 border-b border-gray-200 py-12 first:pt-0 last:border-b-0 last:pb-0 lg:grid-cols-[minmax(0,7fr)_452px] lg:gap-12 lg:py-12">
+    <article
+      className={`grid items-center gap-10 border-b border-gray-200 py-12 first:pt-0 last:border-b-0 lg:gap-12 lg:py-12 ${method.images ? 'lg:grid-cols-[minmax(0,7fr)_minmax(330px,4.5fr)]' : ''}`}
+    >
       <div>
         <h2 className="flex items-baseline gap-4">
-          <span className="text-[11px] font-bold tracking-[0.2em] text-green-400">
+          <span className="text-sm font-bold tracking-[0.2em] text-green-400">
             {String(index + 1).padStart(2, '0')}
           </span>
           <span className="text-[22px] leading-8 font-bold text-gray-800">{method.title}</span>
         </h2>
-        <dl className="mt-5 space-y-3">
+        <dl className="mt-8 space-y-6">
           {method.application ? <MethodDetail label="適用箇所" value={method.application} /> : null}
           <MethodDetail label="適用目的" value={method.purpose} />
         </dl>
       </div>
       {method.images ? (
-        <div className="grid gap-3 sm:grid-cols-2 lg:self-start">
+        <div className="grid gap-3 sm:grid-cols-2">
           {method.images.map((image, imageIndex) => (
             <figure key={image}>
               <img
@@ -80,24 +82,24 @@ function RockfallPreventionMethodSection({
 
 export function RockfallPreventionPage() {
   return (
-    <main>
+    <>
       <section className="border-b border-gray-200">
-        <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
+        <div className="mx-auto max-w-7xl px-6 py-10 lg:px-10 lg:py-14">
           <h1 className="flex items-center gap-4 text-2xl leading-9 font-bold text-gray-800">
             <span aria-hidden="true" className="h-7 w-1 bg-brand" />
             落石対策工
           </h1>
-          <p className="mt-3 pl-5 text-[13px] leading-5 text-gray-600">
+          <p className="mt-3 pl-5 leading-5 text-gray-600">
             法面上の浮石・転石による落石を防止・防護する工法です。
           </p>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-12 lg:px-10 lg:py-16">
+      <section className="mx-auto max-w-7xl px-6 py-10 lg:px-10 lg:py-16">
         {rockfallPreventionMethods.map((method, index) => (
           <RockfallPreventionMethodSection index={index} key={method.title} method={method} />
         ))}
       </section>
-    </main>
+    </>
   )
 }

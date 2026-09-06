@@ -1,6 +1,5 @@
 import { Link } from 'react-router'
 
-import arrowWhite from '../../assets/icons/arrow-white.svg'
 import groundAnchor1 from './assets/ground-anchor-1.webp'
 import groundAnchor2 from './assets/ground-anchor-2.webp'
 import groundReinforcement1 from './assets/ground-reinforcement-1.webp'
@@ -91,8 +90,8 @@ const structuralWorkMethods: readonly StructuralWorkMethod[] = [
 function MethodDetail({ label, value }: Readonly<{ label: string; value: string }>) {
   return (
     <div>
-      <dt className="text-xs font-bold text-green-800">{label}</dt>
-      <dd className="mt-1 text-[13px] leading-[22px] text-neutral-950">{value}</dd>
+      <dt className="text-sm font-bold text-green-800">{label}</dt>
+      <dd className="mt-2 leading-6 text-gray-900">{value}</dd>
     </div>
   )
 }
@@ -102,44 +101,42 @@ function StructuralWorkMethodSection({
   method,
 }: Readonly<{ index: number; method: StructuralWorkMethod }>) {
   return (
-    <article className="grid gap-8 border-b border-gray-200 py-12 first:pt-0 last:border-b-0 last:pb-0 lg:grid-cols-[minmax(0,7fr)_452px] lg:gap-12 lg:py-12">
+    <article
+      className={`grid items-center gap-10 border-b border-gray-200 py-12 first:pt-0 last:border-b-0 lg:gap-12 lg:py-12 ${method.images ? 'lg:grid-cols-[minmax(0,7fr)_minmax(330px,4.5fr)]' : ''}`}
+    >
       <div>
         <h2 className="flex items-baseline gap-4">
-          <span className="text-[11px] font-bold tracking-[0.2em] text-green-400">
+          <span className="text-sm font-bold tracking-[0.2em] text-green-400">
             {String(index + 1).padStart(2, '0')}
           </span>
           <span className="text-[22px] leading-8 font-bold text-gray-800">{method.title}</span>
         </h2>
-        <dl className="mt-5 space-y-3">
+        <dl className="mt-8 space-y-6">
           {method.construction ? (
             <MethodDetail label="施工方法" value={method.construction} />
           ) : null}
           <MethodDetail label="適用箇所" value={method.application} />
           <MethodDetail label="適用目的" value={method.purpose} />
         </dl>
-        {method.note ? (
-          <p className="mt-3 text-[13px] leading-[22px] text-gray-500">※ {method.note}</p>
-        ) : null}
+        {method.note ? <p className="mt-6 leading-6 text-gray-500">※ {method.note}</p> : null}
         {method.detailsTo ? (
           <Link
-            className="mt-4 inline-flex items-center gap-2 bg-brand px-5 py-2.5 text-sm font-bold text-white"
+            className="mt-6 inline-flex rounded-sm bg-brand px-8 py-2.5 text-sm font-bold text-white transition-colors hover:bg-green-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
             to={method.detailsTo}
           >
             詳しく見る
-            <img alt="" className="size-4" height={16} src={arrowWhite} width={16} />
           </Link>
         ) : method.hasDetails ? (
           <button
-            className="mt-4 inline-flex items-center gap-2 bg-brand px-5 py-2.5 text-sm font-bold text-white"
+            className="mt-6 inline-flex rounded-sm bg-brand px-8 py-2.5 text-sm font-bold text-white transition-colors hover:bg-green-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
             type="button"
           >
             詳しく見る
-            <img alt="" className="size-4" height={16} src={arrowWhite} width={16} />
           </button>
         ) : null}
       </div>
       {method.images ? (
-        <div className="grid gap-3 sm:grid-cols-2 lg:self-start">
+        <div className="grid gap-3 sm:grid-cols-2">
           {method.images.map((image, imageIndex) => (
             <figure key={image}>
               <img
@@ -160,24 +157,24 @@ function StructuralWorkMethodSection({
 
 export function StructuralWorkPage() {
   return (
-    <main>
+    <>
       <section className="border-b border-gray-200">
-        <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
+        <div className="mx-auto max-w-7xl px-6 py-10 lg:px-10 lg:py-14">
           <h1 className="flex items-center gap-4 text-2xl leading-9 font-bold text-gray-800">
             <span aria-hidden="true" className="h-7 w-1 bg-brand" />
             構造物工
           </h1>
-          <p className="mt-3 pl-5 text-[13px] leading-5 text-gray-600">
+          <p className="mt-3 pl-5 leading-5 text-gray-600">
             構造物を利用して法面の安定・保護を図る工法です。
           </p>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-12 lg:px-10 lg:py-16">
+      <section className="mx-auto max-w-7xl px-6 py-10 lg:px-10 lg:py-16">
         {structuralWorkMethods.map((method, index) => (
           <StructuralWorkMethodSection index={index} key={method.title} method={method} />
         ))}
       </section>
-    </main>
+    </>
   )
 }

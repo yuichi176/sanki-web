@@ -50,9 +50,9 @@ function RepairStepItem({ index, step }: Readonly<{ index: number; step: RepairS
         {!isLast ? <span aria-hidden="true" className="mt-2 w-px grow bg-green-100" /> : null}
       </div>
       <div className="min-w-0 pb-1">
-        <h3 className="text-[15px] leading-6 font-bold text-green-800">{step.title}</h3>
+        <h3 className="leading-6 font-bold text-green-800">{step.title}</h3>
         {step.description ? (
-          <p className="mt-2 text-sm leading-7 text-gray-800">{step.description}</p>
+          <p className="mt-2 leading-7 text-gray-800">{step.description}</p>
         ) : null}
         {step.image ? (
           <img
@@ -70,15 +70,15 @@ export function SlopeRepairPage() {
   return (
     <main>
       <section className="border-b border-gray-200">
-        <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
-          <p className="text-xs leading-[18px] text-gray-600">
+        <div className="mx-auto max-w-7xl px-6 py-10 lg:px-10 lg:py-14">
+          <p className="text-sm leading-[18px] text-gray-600">
             事業内容 &gt; 構造物工 &gt; 既設法面補修工
           </p>
           <h1 className="mt-4 flex items-center gap-4 text-2xl leading-9 font-bold text-gray-800">
             <span aria-hidden="true" className="h-7 w-1 bg-brand" />
             既設法面補修工
           </h1>
-          <p className="mt-3 pl-5 text-[13px] leading-5 text-gray-600">
+          <p className="mt-3 pl-5 leading-5 text-gray-600">
             経年劣化した既設モルタル・コンクリート法面を補強・補修する工法です。
           </p>
         </div>
@@ -88,13 +88,13 @@ export function SlopeRepairPage() {
         <SectionHeading size="section">既設法面補修工とは</SectionHeading>
         <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,732px)_420px] lg:gap-12">
           <div>
-            <p className="text-sm leading-7 text-gray-800">
+            <p className="leading-7 text-gray-800">
               モルタル・コンクリート吹付工は昭和３０年代から施工され始め、現在に至るまで有効に機能しているものや、途中、老朽化によって別の工法に更新されたものがあります。
             </p>
-            <p className="mt-4 text-sm leading-7 text-gray-800">
+            <p className="mt-4 leading-7 text-gray-800">
               老朽化の原因は大きくモルタル・コンクリート自体の老朽化と、地山表層の風化あるいは変位がある。老朽化したままの状態では危険なため、補修、補強を行います。
             </p>
-            <dl className="mt-7 space-y-2 text-[13px] leading-[22px]">
+            <dl className="mt-10 space-y-2 text-sm leading-[22px] lg:mt-12">
               <div className="grid gap-1 sm:grid-cols-[68px_1fr] sm:gap-4">
                 <dt className="font-bold text-green-800">適用箇所</dt>
                 <dd className="text-neutral-950">

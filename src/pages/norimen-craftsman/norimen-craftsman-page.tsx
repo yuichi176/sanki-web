@@ -92,7 +92,7 @@ const careerStages: readonly CareerStage[] = [
 ]
 
 function PageIntroduction({ children }: Readonly<{ children: string }>) {
-  return <p className="mt-3 pl-5 text-[13px] leading-5 text-gray-600">{children}</p>
+  return <p className="mt-3 pl-5 leading-5 text-gray-600">{children}</p>
 }
 
 function WorkSection({ index, workItem }: Readonly<{ index: number; workItem: WorkItem }>) {
@@ -133,7 +133,7 @@ export function NorimenCraftsmanPage() {
   return (
     <>
       <section className="border-b border-gray-200">
-        <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
+        <div className="mx-auto max-w-7xl px-6 py-10 lg:px-10 lg:py-14">
           <SectionHeading>法面職人の仕事</SectionHeading>
           <PageIntroduction>
             三気建設の職人が日々取り組む仕事の内容とキャリアをご紹介します。
@@ -155,7 +155,7 @@ export function NorimenCraftsmanPage() {
           三気建設は、職人とただ働くだけではなく、彼らのキャリアをともに考え、ともに成長していくプランを考えています。
         </PageIntroduction>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-4 xl:gap-4">
+        <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4 xl:gap-4">
           {careerStages.map((stage, index) => (
             <article className="relative flex flex-col pt-7 xl:pt-0" key={stage.period}>
               {index < careerStages.length - 1 ? (
@@ -186,7 +186,7 @@ export function NorimenCraftsmanPage() {
           <p className="border-y border-gray-200 py-3">土木施工管理技士２級</p>
           <p className="border-y border-gray-200 py-3">土木施工管理技士１級</p>
         </div>
-        <p className="mt-10 text-center text-sm leading-7 text-gray-700">
+        <p className="mt-16 text-center leading-7 text-gray-700">
           業務に必要な資格、スキル向上のための講習会費用など
           <br />
           必要な費用を会社が全額負担します。（条件あり）

@@ -47,7 +47,7 @@ function EnvironmentCard({ environment }: Readonly<{ environment: WorkEnvironmen
   return (
     <article>
       <p className="text-sm font-bold tracking-[0.2em] text-brand">{environment.englishTitle}</p>
-      <h3 className="mt-2 flex items-center gap-3 text-xl font-bold text-gray-800">
+      <h3 className="mt-4 flex items-center gap-3 text-xl font-bold text-gray-800">
         <span aria-hidden="true" className="h-0.5 w-6 bg-brand" />【{environment.title}】
       </h3>
       <ul className="mt-6 min-h-86 bg-gray-100 px-7 py-6 text-sm leading-[25px] text-gray-800">
@@ -68,9 +68,9 @@ export function CareersPage() {
   return (
     <>
       <section className="border-b border-gray-200">
-        <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
+        <div className="mx-auto max-w-7xl px-6 py-10 lg:px-10 lg:py-14">
           <SectionHeading>採用情報</SectionHeading>
-          <p className="mt-3 pl-5 text-[13px] leading-5 text-gray-600">
+          <p className="mt-3 pl-5 leading-5 text-gray-600">
             三気建設株式会社で働く仲間を募集しています。
           </p>
         </div>
@@ -88,7 +88,7 @@ export function CareersPage() {
             <br />
             を募集しています。
           </h1>
-          <div className="mt-10 space-y-1 text-sm leading-[26.6px] text-green-50">
+          <div className="mt-10 space-y-1 leading-[26.6px] text-green-50">
             <p>土木の仕事はハードな面もありますが、</p>
             <p>社会的に重要な役割を担い、なくてはならない仕事です。</p>
             <p>身体を動かし、働いた分知識や技術が身につきます。</p>

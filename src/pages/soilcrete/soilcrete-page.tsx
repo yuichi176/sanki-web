@@ -16,15 +16,15 @@ export function SoilcretePage() {
   return (
     <main>
       <section className="border-b border-gray-200">
-        <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
-          <p className="text-xs leading-[18px] text-gray-600">
+        <div className="mx-auto max-w-7xl px-6 py-10 lg:px-10 lg:py-14">
+          <p className="text-sm leading-[18px] text-gray-600">
             事業内容 &gt; 構造物工 &gt; ソイルクリート工法
           </p>
           <h1 className="mt-4 flex items-center gap-4 text-2xl leading-9 font-bold text-gray-800">
             <span aria-hidden="true" className="h-7 w-1 bg-brand" />
             ソイルクリート工法
           </h1>
-          <p className="mt-3 pl-5 text-[13px] leading-5 text-gray-600">
+          <p className="mt-3 pl-5 leading-5 text-gray-600">
             型枠を使用しない現場打ち法枠工法で、コスト・工期・品質に優れた効果を発揮します。
           </p>
         </div>
@@ -34,13 +34,13 @@ export function SoilcretePage() {
         <SectionHeading size="section">ソイルクリート工法とは</SectionHeading>
         <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,732px)_420px] lg:gap-12">
           <div>
-            <p className="text-sm leading-7 text-gray-800">
+            <p className="leading-7 text-gray-800">
               「ソイルクリート工法」は、吹付法枠工法の中でも複雑な型枠を使用しない簡易吹付法枠工法です。しかも、従来の工法に比べ、コスト・工期・景観保全等において優れた効果を発揮します。
             </p>
-            <p className="mt-4 text-sm leading-7 text-gray-800">
+            <p className="mt-4 leading-7 text-gray-800">
               ソイルクリート（Aタイプ・Mタイプ）は、組立枠「ガッテンダー」により、鉄筋位置が適切な位置に保持でき、かつ正確な断面形状が確保され、品質の高い法枠が形成できます。
             </p>
-            <dl className="mt-7 space-y-2 text-[13px] leading-[22px]">
+            <dl className="mt-10 space-y-2 text-sm leading-[22px] lg:mt-12">
               <div className="grid gap-1 sm:grid-cols-[68px_1fr] sm:gap-4">
                 <dt className="font-bold text-green-800">適用箇所</dt>
                 <dd className="text-neutral-950">
@@ -74,7 +74,7 @@ export function SoilcretePage() {
           <ul className="mt-8 border-t border-gray-200">
             {features.map((feature) => (
               <li
-                className="flex gap-4 border-b border-gray-200 py-[18px] text-sm leading-[26px] text-gray-800"
+                className="flex gap-4 border-b border-gray-200 py-[18px]  leading-[26px] text-gray-800"
                 key={feature}
               >
                 <span aria-hidden="true" className="pt-1 text-base leading-6 text-brand">

@@ -115,7 +115,7 @@ export function HomePage() {
             {serviceItems.map(({ description, href, title }) => (
               <article className="bg-white p-8" key={title}>
                 <h3 className="text-lg font-bold text-green-700">{title}</h3>
-                <p className="mt-4 text-sm leading-7 text-gray-600">{description}</p>
+                <p className="mt-4  leading-7 text-gray-600">{description}</p>
                 <Link
                   className="mt-5 inline-flex items-center gap-1 text-sm font-bold text-green-700 hover:underline"
                   to={href}

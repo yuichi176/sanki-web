@@ -60,17 +60,17 @@ function WorkCard({ workType }: Readonly<{ workType: WorkType }>) {
       <img alt={workType.name} className="h-55 w-full object-cover" src={workType.image} />
       <div className="flex min-h-48 flex-col p-6">
         <h3 className="text-xl leading-7 font-bold text-gray-800">{workType.name}</h3>
-        <p className="mt-3 text-sm leading-[22px] text-gray-600">{workType.description}</p>
+        <p className="mt-3 leading-[22px] text-gray-600">{workType.description}</p>
         {workType.detailsTo ? (
           <Link
-            className="mt-auto bg-brand px-5 py-2.5 text-center text-sm font-bold text-white transition-colors hover:bg-green-700"
+            className="mt-auto rounded-xs bg-brand px-5 py-2.5 text-center text-sm font-bold text-white transition-colors hover:bg-green-700"
             to={workType.detailsTo}
           >
             詳しく見る
           </Link>
         ) : workType.hasDetails ? (
           <button
-            className="mt-auto bg-brand px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-green-700"
+            className="mt-auto rounded-xs bg-brand px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-green-700"
             type="button"
           >
             詳しく見る
@@ -85,12 +85,12 @@ export function ServicesPage() {
   return (
     <main>
       <section className="border-b border-gray-200">
-        <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
+        <div className="mx-auto max-w-7xl px-6 py-10 lg:px-10 lg:py-14">
           <h1 className="flex items-center gap-4 text-2xl leading-9 font-bold text-gray-800">
             <span aria-hidden="true" className="h-7 w-1 bg-brand" />
             事業内容
           </h1>
-          <p className="mt-3 pl-5 text-sm text-gray-600">
+          <p className="mt-3 pl-5 text-gray-600">
             三気建設が手がける工事の種類・内容をご紹介します。
           </p>
         </div>
@@ -98,7 +98,7 @@ export function ServicesPage() {
 
       <section className="mx-auto max-w-7xl px-6 py-14 lg:px-10 lg:pb-16">
         <h2 className="text-2xl leading-9 font-bold text-gray-800">法面保護工とは</h2>
-        <div className="mt-8 space-y-4 text-sm leading-7 text-gray-900">
+        <div className="mt-8 space-y-4 leading-7 text-gray-900">
           <p>
             人工的または自然発生的に形成された傾斜面を「法面（のりめん）」といいます。その「法面」を構造物や植物を利用し、保護する「法面保護工」を中心とした土木工事を行っています。
           </p>
@@ -106,14 +106,14 @@ export function ServicesPage() {
             盛土工または切土工によって人工的に形成された土または岩の斜面をそれぞれ盛土法面および切土法面といい、これらを総称して法面といいます。「法面を造成するための土工」と「法面を保護するための種々の保護工」とを合わせて「法面工」といい、法面の浸食や風化、崩壊を防止するためにおこなう植生や構造物による法面被覆等を「法面保護工」といいます。
           </p>
         </div>
-        <div className="mx-auto mt-8 grid max-w-268 items-center gap-6 md:grid-cols-[1fr_auto_1fr] md:gap-8">
+        <div className="mx-auto mt-10 grid max-w-268 items-center gap-6 md:grid-cols-[1fr_auto_1fr] md:gap-8">
           <figure>
             <img
               alt="法面保護工の施工前"
               className="h-70 w-full rounded object-cover"
               src={norimenBeforeImage}
             />
-            <figcaption className="pt-2 text-center text-xs leading-[18px] text-gray-700">
+            <figcaption className="pt-2 text-center text-sm leading-[18px] text-gray-700">
               施工前
             </figcaption>
           </figure>
@@ -129,7 +129,7 @@ export function ServicesPage() {
               className="h-70 w-full rounded object-cover"
               src={norimenAfterImage}
             />
-            <figcaption className="pt-2 text-center text-xs leading-[18px] text-gray-700">
+            <figcaption className="pt-2 text-center text-sm leading-[18px] text-gray-700">
               施工後
             </figcaption>
           </figure>

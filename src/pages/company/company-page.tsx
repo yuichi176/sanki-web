@@ -46,7 +46,7 @@ function MvvSection({ item }: Readonly<{ item: MvvItem }>) {
   return (
     <section className="grid border-b border-green-100 last:border-b-0 md:grid-cols-[224px_1fr]">
       <div className="relative border-l-[3px] border-brand px-6 py-8 md:p-16">
-        <p className="text-xs tracking-[0.27em] text-brand">{item.label}</p>
+        <p className="text-sm tracking-[0.27em] text-brand">{item.label}</p>
       </div>
       <div className="border-l border-green-100 px-6 py-8 md:p-12">
         {item.title ? (
@@ -56,7 +56,7 @@ function MvvSection({ item }: Readonly<{ item: MvvItem }>) {
           <ol className="grid md:grid-cols-2 md:gap-x-16">
             {item.values.map((value, index) => (
               <li
-                className="flex items-center gap-5 border-b border-green-100 py-5 text-sm leading-6 text-gray-800"
+                className="flex items-center gap-5 border-b border-green-100 py-5 leading-6 text-gray-800"
                 key={value}
               >
                 <span className="flex size-8 shrink-0 items-center justify-center border border-green-200 text-xs font-bold text-green-700">
@@ -76,9 +76,9 @@ export function CompanyPage() {
   return (
     <>
       <section className="border-b border-gray-200">
-        <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
+        <div className="mx-auto max-w-7xl px-6 py-10 lg:px-10 lg:py-14">
           <SectionHeading>会社概要</SectionHeading>
-          <p className="mt-3 pl-5 text-[13px] leading-5 text-gray-600">
+          <p className="mt-3 pl-5  leading-5 text-gray-600">
             三気建設株式会社の理念・概要・事業所をご紹介します。
           </p>
         </div>
@@ -96,7 +96,7 @@ export function CompanyPage() {
             <p className="text-sm tracking-[0.2em] text-brand">Philosophy</p>
             <span aria-hidden="true" className="mt-4 block h-24 w-px bg-brand" />
           </div>
-          <div className="space-y-8 text-sm leading-9 text-gray-800">
+          <div className="space-y-8 leading-9 text-gray-800">
             <p>
               日々の生活に欠かせない電気や水道、道路や鉄道とも密接に関わり、自然災害から人々を守る社会基盤。
               <br />
@@ -123,7 +123,7 @@ export function CompanyPage() {
             src={historyImage}
           />
           <div className="px-6 py-10 lg:h-[465px] lg:px-12 lg:pt-[46px] lg:pb-0">
-            <p className="text-xs tracking-[0.2em] text-brand">History</p>
+            <p className="text-sm tracking-[0.2em] text-brand">History</p>
             <h2 className="mt-6 text-2xl leading-9 font-bold text-gray-800">沿革</h2>
             <span aria-hidden="true" className="mt-7 block h-0.5 w-8 bg-brand" />
             <ul className="mt-8 space-y-4 text-sm leading-6 text-gray-700">
