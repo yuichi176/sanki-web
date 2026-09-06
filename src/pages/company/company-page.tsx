@@ -1,4 +1,5 @@
 import historyImage from './assets/company-history.webp'
+import { SectionHeading } from '../section-heading'
 
 interface MvvItem {
   readonly label: string
@@ -8,7 +9,6 @@ interface MvvItem {
 
 interface Office {
   readonly address: string
-  readonly mapUrl: string
   readonly name: string
 }
 
@@ -31,22 +31,15 @@ const offices: readonly Office[] = [
   {
     name: '本社',
     address: '〒501-0552 岐阜県揖斐郡大野町大字大衣斐264番地',
-    mapUrl: 'https://www.google.com/maps?q=岐阜県揖斐郡大野町大字大衣斐264&output=embed',
   },
   {
     name: '飯田営業所',
     address: '〒395-2566 長野県飯田市嶋86番地',
-    mapUrl: 'https://www.google.com/maps?q=長野県飯田市嶋86番地&output=embed',
   },
 ]
 
-function SectionHeading({ children }: Readonly<{ children: string }>) {
-  return (
-    <h2 className="flex items-center gap-4 text-2xl leading-9 font-bold text-gray-800">
-      <span aria-hidden="true" className="h-7 w-1 bg-brand" />
-      {children}
-    </h2>
-  )
+function createGoogleMapEmbedUrl(address: string): string {
+  return `https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`
 }
 
 function MvvSection({ item }: Readonly<{ item: MvvItem }>) {
@@ -171,7 +164,7 @@ export function CompanyPage() {
                 className="mt-5 h-90 w-full border-0"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                src={office.mapUrl}
+                src={createGoogleMapEmbedUrl(office.address)}
                 title={`${office.name}の地図`}
               />
               <address className="mt-4 text-sm leading-6 text-gray-700 not-italic">

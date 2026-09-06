@@ -7,6 +7,7 @@ import craftsman6Image from './assets/norimen_craftsman_6.webp'
 import craftsman7Image from './assets/norimen_craftsman_7.webp'
 import craftsman8Image from './assets/norimen_craftsman_8.webp'
 import workshopImage from './assets/workshop.webp'
+import { SectionHeading } from '../section-heading'
 
 interface WorkItem {
   readonly description: readonly string[]
@@ -89,15 +90,6 @@ const careerStages: readonly CareerStage[] = [
     ],
   },
 ]
-
-function SectionHeading({ children }: Readonly<{ children: string }>) {
-  return (
-    <h2 className="flex items-center gap-4 text-2xl leading-9 font-bold text-gray-800">
-      <span aria-hidden="true" className="h-7 w-1 bg-brand" />
-      {children}
-    </h2>
-  )
-}
 
 function PageIntroduction({ children }: Readonly<{ children: string }>) {
   return <p className="mt-3 pl-5 text-[13px] leading-5 text-gray-600">{children}</p>
@@ -214,12 +206,14 @@ export function NorimenCraftsmanPage() {
               className="h-auto w-full object-cover"
               src={workshopImage}
             />
-            <button
-              className="mt-6 w-full bg-brand px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-green-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
-              type="button"
+            <a
+              className="mt-6 flex w-full items-center justify-center bg-brand px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-green-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSes1qoynGsxrXOJspwUcN7Mu7CuL7zyIZB88DeEEDXUBTzwig/viewform"
+              rel="noreferrer"
+              target="_blank"
             >
               体験・見学に関するお問い合わせはこちら
-            </button>
+            </a>
           </div>
         </div>
       </section>

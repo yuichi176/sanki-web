@@ -1,5 +1,6 @@
 import arrowRight from './assets/arrow-right.svg'
 import recruitHeroImage from './assets/recruit-hero.webp'
+import { SectionHeading } from '../section-heading'
 
 interface WorkEnvironment {
   readonly englishTitle: string
@@ -41,15 +42,6 @@ const workEnvironments: readonly WorkEnvironment[] = [
     ],
   },
 ]
-
-function SectionHeading({ children }: Readonly<{ children: string }>) {
-  return (
-    <h2 className="flex items-center gap-4 text-2xl leading-9 font-bold text-gray-800">
-      <span aria-hidden="true" className="h-7 w-1 bg-brand" />
-      {children}
-    </h2>
-  )
-}
 
 function EnvironmentCard({ environment }: Readonly<{ environment: WorkEnvironment }>) {
   return (

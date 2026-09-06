@@ -6,6 +6,7 @@ import service2Image from './assets/service_2.webp'
 import service3Image from './assets/service_3.webp'
 import service4Image from './assets/service_4.webp'
 import service5Image from './assets/service_5.webp'
+import { SectionHeading } from '../section-heading'
 
 interface WorkType {
   readonly description: string
@@ -46,15 +47,6 @@ const workTypes: readonly WorkType[] = [
     hasDetails: false,
   },
 ]
-
-function SectionHeading({ children }: Readonly<{ children: string }>) {
-  return (
-    <h2 className="flex items-center gap-4 text-2xl leading-9 font-bold text-gray-800">
-      <span aria-hidden="true" className="h-7 w-1 bg-brand" />
-      {children}
-    </h2>
-  )
-}
 
 function WorkCard({ workType }: Readonly<{ workType: WorkType }>) {
   return (
