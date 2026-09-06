@@ -2,6 +2,7 @@ import lathInstallationImage from './assets/lath-installation.webp'
 import repairOverviewImage from './assets/repair-overview.webp'
 import rockBoltInstallationImage from './assets/rock-bolt-installation.webp'
 import voidFillingImage from './assets/void-filling.webp'
+import { SectionHeading } from '../section-heading'
 
 interface RepairStep {
   readonly description?: string
@@ -36,15 +37,6 @@ const repairSteps: readonly RepairStep[] = [
   },
   { title: 'モルタル・コンクリート吹付' },
 ]
-
-function SectionHeading({ children }: Readonly<{ children: string }>) {
-  return (
-    <h2 className="flex items-center gap-4 text-xl leading-[30px] font-bold text-gray-800">
-      <span aria-hidden="true" className="h-6 w-1 bg-brand" />
-      {children}
-    </h2>
-  )
-}
 
 function RepairStepItem({ index, step }: Readonly<{ index: number; step: RepairStep }>) {
   const isLast = index === repairSteps.length - 1
@@ -93,7 +85,7 @@ export function SlopeRepairPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
-        <SectionHeading>既設法面補修工とは</SectionHeading>
+        <SectionHeading size="section">既設法面補修工とは</SectionHeading>
         <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,732px)_420px] lg:gap-12">
           <div>
             <p className="text-sm leading-7 text-gray-800">
@@ -128,7 +120,7 @@ export function SlopeRepairPage() {
 
       <section className="bg-gray-100">
         <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
-          <SectionHeading>既設法面補修工 手順</SectionHeading>
+          <SectionHeading size="section">既設法面補修工 手順</SectionHeading>
           <ol className="mt-10 max-w-300">
             {repairSteps.map((step, index) => (
               <RepairStepItem index={index} key={step.title} step={step} />

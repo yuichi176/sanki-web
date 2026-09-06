@@ -1,4 +1,5 @@
 import gattenderUnitImage from './assets/gattender-unit.webp'
+import { SectionHeading } from '../section-heading'
 
 const features: readonly string[] = [
   '複雑な型枠に代えて簡易な組立枠（ガッテンダー）を使用するため、地山のならし作業をほとんど必要とせず、地山の凹凸に沿った施工ができます。',
@@ -10,15 +11,6 @@ const features: readonly string[] = [
   '資材が軽量で設置が容易なため、施工性、経済性に優れています。',
   '標準以外の枠スパンへの対応が容易です。',
 ]
-
-function SectionHeading({ children }: Readonly<{ children: string }>) {
-  return (
-    <h2 className="flex items-center gap-4 text-xl leading-[30px] font-bold text-gray-800">
-      <span aria-hidden="true" className="h-6 w-1 bg-brand" />
-      {children}
-    </h2>
-  )
-}
 
 export function SoilcretePage() {
   return (
@@ -39,7 +31,7 @@ export function SoilcretePage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
-        <SectionHeading>ソイルクリート工法とは</SectionHeading>
+        <SectionHeading size="section">ソイルクリート工法とは</SectionHeading>
         <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,732px)_420px] lg:gap-12">
           <div>
             <p className="text-sm leading-7 text-gray-800">
@@ -78,7 +70,7 @@ export function SoilcretePage() {
 
       <section className="bg-gray-100">
         <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
-          <SectionHeading>ソイルクリート工法 特長</SectionHeading>
+          <SectionHeading size="section">ソイルクリート工法 特長</SectionHeading>
           <ul className="mt-8 border-t border-gray-200">
             {features.map((feature) => (
               <li
