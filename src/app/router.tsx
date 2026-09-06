@@ -8,6 +8,7 @@ import { HomePage } from '../pages/home/home-page'
 import { NewsPage } from '../pages/news/news-page'
 import { NorimenCraftsmanPage } from '../pages/norimen-craftsman/norimen-craftsman-page'
 import { NotFoundPage } from '../pages/not-found/not-found-page'
+import { RockfallPreventionPage } from '../pages/rockfall-prevention/rockfall-prevention-page'
 import { ServicesPage } from '../pages/services/services-page'
 import { SoilcretePage } from '../pages/soilcrete/soilcrete-page'
 import { SlopeRepairPage } from '../pages/slope-repair/slope-repair-page'
@@ -22,6 +23,7 @@ export const router = createBrowserRouter([
       { index: true, Component: HomePage },
       { path: 'news', Component: NewsPage },
       { path: 'services', Component: ServicesPage },
+      { path: 'rockfall-prevention', Component: RockfallPreventionPage },
       { path: 'soilcrete', Component: SoilcretePage },
       { path: 'slope-repair', Component: SlopeRepairPage },
       { path: 'structural-work', Component: StructuralWorkPage },

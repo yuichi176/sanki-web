@@ -39,7 +39,7 @@ const serviceItems: readonly ServiceItem[] = [
   {
     title: '落石対策工',
     description: '法面上の浮石・転石による落石を防止・防護する工法',
-    href: '/services',
+    href: '/rockfall-prevention',
   },
 ]
 

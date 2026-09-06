@@ -38,6 +38,7 @@ const workTypes: readonly WorkType[] = [
     description: '落石・崩落の危険がある斜面に防護工を施し、安全を確保します。',
     image: service3Image,
     hasDetails: true,
+    detailsTo: '/rockfall-prevention',
   },
   {
     name: 'トンネル吹付工',
