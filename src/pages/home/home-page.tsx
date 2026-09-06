@@ -34,7 +34,7 @@ const serviceItems: readonly ServiceItem[] = [
   {
     title: '構造物工',
     description: '構造物を利用して法面の安定・保護を図る工法',
-    href: '/services',
+    href: '/structural-work',
   },
   {
     title: '落石対策工',
