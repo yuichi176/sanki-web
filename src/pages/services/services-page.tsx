@@ -1,11 +1,11 @@
 import arrowRight from './assets/arrow-right.svg'
-import norimenAfterImage from './assets/norimen-after.jpg'
-import norimenBeforeImage from './assets/norimen-before.jpg'
-import service1Image from './assets/service_1.jpg'
-import service2Image from './assets/service_2.jpg'
-import service3Image from './assets/service_3.jpg'
-import service4Image from './assets/service_4.jpg'
-import service5Image from './assets/service_5.jpg'
+import norimenAfterImage from './assets/norimen-after.webp'
+import norimenBeforeImage from './assets/norimen-before.webp'
+import service1Image from './assets/service_1.webp'
+import service2Image from './assets/service_2.webp'
+import service3Image from './assets/service_3.webp'
+import service4Image from './assets/service_4.webp'
+import service5Image from './assets/service_5.webp'
 
 interface WorkType {
   readonly description: string
