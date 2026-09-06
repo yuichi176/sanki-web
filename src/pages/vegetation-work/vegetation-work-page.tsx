@@ -1,3 +1,5 @@
+import { Link } from 'react-router'
+
 import vegetation01 from './assets/vegetation-01.webp'
 import vegetation02 from './assets/vegetation-02.webp'
 import vegetation03 from './assets/vegetation-03.webp'
@@ -17,6 +19,7 @@ import vegetation20 from './assets/vegetation-20.webp'
 import vegetation21 from './assets/vegetation-21.webp'
 
 interface VegetationMethod {
+  readonly detailsTo?: string
   readonly geology: string
   readonly images: readonly string[]
   readonly introduction: string
@@ -51,6 +54,7 @@ const vegetationMethods: readonly VegetationMethod[] = [
   },
   {
     name: 'チップ材吹付工',
+    detailsTo: '/chip-material-spraying',
     introduction:
       '伐採した木材を粉砕したチップ材を主体とした植生基材に、肥料・侵食防止剤・種子を混合して吹き付ける工法です。',
     geology: '土壌硬度23㎜以下の粘性土、27㎜以下の砂質土、礫質土、軟・硬岩、1：0.5より緩勾配',
@@ -139,6 +143,14 @@ function VegetationMethodSection({
           <Detail label="施工方法" value={method.introduction} />
           <Detail label="適用地質条件" value={method.geology} />
           <Detail label="導入植物" value={method.plants} />
+          {method.detailsTo ? (
+            <Link
+              className="inline-flex bg-brand px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-green-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+              to={method.detailsTo}
+            >
+              詳しく見る
+            </Link>
+          ) : null}
         </dl>
       </div>
       <div

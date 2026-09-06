@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router'
 
 import { AppLayout } from './app-layout'
 import { CareersPage } from '../pages/careers/careers-page'
+import { ChipMaterialSprayingPage } from '../pages/chip-material-spraying/chip-material-spraying-page'
 import { CompanyPage } from '../pages/company/company-page'
 import { HomePage } from '../pages/home/home-page'
 import { NewsPage } from '../pages/news/news-page'
@@ -18,6 +19,7 @@ export const router = createBrowserRouter([
       { path: 'news', Component: NewsPage },
       { path: 'services', Component: ServicesPage },
       { path: 'vegetation-work', Component: VegetationWorkPage },
+      { path: 'chip-material-spraying', Component: ChipMaterialSprayingPage },
       { path: 'norimen-craftsman', Component: NorimenCraftsmanPage },
       { path: 'careers', Component: CareersPage },
       { path: 'company', Component: CompanyPage },
