@@ -5,7 +5,7 @@ import companyMark from '../assets/company-mark.png'
 
 export function SiteFooter() {
   return (
-    <footer className="bg-white">
+    <footer className="border-t border-gray-200 bg-white">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
         <div className="grid gap-15 md:grid-cols-[280px_1fr]">
           <div>
