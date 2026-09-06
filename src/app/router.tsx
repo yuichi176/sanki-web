@@ -8,6 +8,7 @@ import { NewsPage } from '../pages/news/news-page'
 import { NorimenCraftsmanPage } from '../pages/norimen-craftsman/norimen-craftsman-page'
 import { NotFoundPage } from '../pages/not-found/not-found-page'
 import { ServicesPage } from '../pages/services/services-page'
+import { VegetationWorkPage } from '../pages/vegetation-work/vegetation-work-page'
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ export const router = createBrowserRouter([
       { index: true, Component: HomePage },
       { path: 'news', Component: NewsPage },
       { path: 'services', Component: ServicesPage },
+      { path: 'vegetation-work', Component: VegetationWorkPage },
       { path: 'norimen-craftsman', Component: NorimenCraftsmanPage },
       { path: 'careers', Component: CareersPage },
       { path: 'company', Component: CompanyPage },

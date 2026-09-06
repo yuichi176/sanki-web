@@ -14,6 +14,7 @@ interface NewsItem {
 
 interface ServiceItem {
   readonly description: string
+  readonly href: string
   readonly title: string
 }
 
@@ -25,9 +26,21 @@ const newsItems: readonly NewsItem[] = [
 ]
 
 const serviceItems: readonly ServiceItem[] = [
-  { title: '植生工', description: '植物を利用して法面を緑化・保護する工法' },
-  { title: '構造物工', description: '構造物を利用して法面の安定・保護を図る工法' },
-  { title: '落石対策工', description: '法面上の浮石・転石による落石を防止・防護する工法' },
+  {
+    title: '植生工',
+    description: '植物を利用して法面を緑化・保護する工法',
+    href: '/vegetation-work',
+  },
+  {
+    title: '構造物工',
+    description: '構造物を利用して法面の安定・保護を図る工法',
+    href: '/services',
+  },
+  {
+    title: '落石対策工',
+    description: '法面上の浮石・転石による落石を防止・防護する工法',
+    href: '/services',
+  },
 ]
 
 interface SectionHeadingProps {
@@ -99,13 +112,13 @@ export function HomePage() {
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
           <SectionHeading moreTo="/services">事業内容</SectionHeading>
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
-            {serviceItems.map(({ description, title }) => (
+            {serviceItems.map(({ description, href, title }) => (
               <article className="bg-white p-8" key={title}>
                 <h3 className="text-lg font-bold text-green-700">{title}</h3>
                 <p className="mt-4 text-sm leading-7 text-gray-600">{description}</p>
                 <Link
                   className="mt-5 inline-flex items-center gap-1 text-sm font-bold text-green-700 hover:underline"
-                  to="/services"
+                  to={href}
                 >
                   詳しく見る
                   <img alt="" className="size-3.5" height={14} src={arrowGreen} width={14} />
