@@ -205,7 +205,8 @@ export function NorimenCraftsmanPage() {
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
           <SectionHeading>法面職人を体験してみませんか？</SectionHeading>
           <PageIntroduction>
-            三気建設は、職人とただ働くだけではなく、彼らのキャリアをともに考え、ともに成長していくプランを考えています。
+            三気建設では、土木のこと、法面のことを より多くの方に知っていただきたく、
+            見学や体験を随時行っています。
           </PageIntroduction>
           <div className="mx-auto mt-12 max-w-126">
             <img
