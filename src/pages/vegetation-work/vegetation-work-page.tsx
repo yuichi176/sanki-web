@@ -132,7 +132,9 @@ function VegetationMethodSection({
   method,
 }: Readonly<{ index: number; method: VegetationMethod }>) {
   return (
-    <article className="grid gap-8 border-b border-gray-200 py-12 first:pt-0 lg:grid-cols-[minmax(0,7fr)_minmax(330px,4.5fr)] lg:gap-12 lg:py-12">
+    <article
+      className={`grid gap-8 border-b border-gray-200 py-12 first:pt-0 lg:gap-12 lg:py-12 ${method.images.length > 0 ? 'lg:grid-cols-[minmax(0,7fr)_minmax(330px,4.5fr)]' : ''}`}
+    >
       <div>
         <h2 className="flex items-baseline gap-4">
           <span className="text-xs font-bold tracking-[0.2em] text-green-400">
@@ -154,22 +156,24 @@ function VegetationMethodSection({
           ) : null}
         </dl>
       </div>
-      <div
-        className={`grid gap-3 ${method.images.length > 1 ? 'sm:grid-cols-2' : 'sm:max-w-55 sm:justify-self-end'}`}
-      >
-        {method.images.map((image, imageIndex) => (
-          <figure key={image}>
-            <img
-              alt={`${method.name}の施工例${imageIndex + 1}`}
-              className="aspect-[22/15] w-full rounded object-cover"
-              src={image}
-            />
-            <figcaption className="mt-1.5 text-center text-xs text-gray-700">
-              施工例{imageIndex === 0 ? '①' : '②'}
-            </figcaption>
-          </figure>
-        ))}
-      </div>
+      {method.images.length > 0 ? (
+        <div
+          className={`grid gap-3 ${method.images.length > 1 ? 'sm:grid-cols-2' : 'sm:max-w-55 sm:justify-self-end'}`}
+        >
+          {method.images.map((image, imageIndex) => (
+            <figure key={image}>
+              <img
+                alt={`${method.name}の施工例${imageIndex + 1}`}
+                className="aspect-[22/15] w-full rounded object-cover"
+                src={image}
+              />
+              <figcaption className="mt-1.5 text-center text-xs text-gray-700">
+                施工例{imageIndex === 0 ? '①' : '②'}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      ) : null}
     </article>
   )
 }
