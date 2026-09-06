@@ -31,12 +31,14 @@ const workTypes: readonly WorkType[] = [
     description: 'コンクリートや鋼材などの構造物で法面を安定させます。',
     image: service2Image,
     hasDetails: true,
+    detailsTo: '/structural-work',
   },
   {
     name: '落石対策工',
     description: '落石・崩落の危険がある斜面に防護工を施し、安全を確保します。',
     image: service3Image,
     hasDetails: true,
+    detailsTo: '/rockfall-prevention',
   },
   {
     name: 'トンネル吹付工',
