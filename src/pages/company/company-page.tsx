@@ -122,26 +122,40 @@ export function CompanyPage() {
         </div>
       </section>
 
-      <section className="py-8">
-        <div className="mx-auto grid max-w-7xl lg:grid-cols-[2fr_1fr]">
+      <section className="py-10">
+        <div className="mx-auto grid max-w-7xl px-6 lg:grid-cols-[2fr_1fr] lg:px-10">
           <img
             alt="創業当時の様子"
-            className="size-full min-h-80 object-cover"
+            className="h-80 w-full object-cover lg:h-[465px]"
             src={historyImage}
           />
-          <div className="px-6 py-12 lg:p-12">
-            <p className="text-sm tracking-[0.2em] text-brand">History</p>
-            <h2 className="mt-2 text-2xl font-bold text-gray-800">沿革</h2>
+          <div className="px-6 py-10 lg:h-[465px] lg:px-12 lg:pt-[46px] lg:pb-0">
+            <p className="text-xs tracking-[0.2em] text-brand">History</p>
+            <h2 className="mt-6 text-2xl leading-9 font-bold text-gray-800">沿革</h2>
             <span aria-hidden="true" className="mt-7 block h-0.5 w-8 bg-brand" />
             <ul className="mt-8 space-y-4 text-sm leading-6 text-gray-700">
-              <li>■ 昭和五十二年四月八日創業</li>
-              <li>■ 発電所（ダム）建設工事の作業員らによって土木一式工事会社としてスタート</li>
-              <li>
-                ■
-                昭和五十五年当時には難しかった「岩盤への緑化工事」にいち早く成功し、のり面工事に特化
+              <li className="flex gap-3">
+                <span aria-hidden="true">■</span>
+                <span>昭和五十二年四月八日創業</span>
               </li>
-              <li>■ 平成十三年、本社を岐阜県大野町へ移転</li>
-              <li>■ 従業員数：十六名（二〇二六年現在）</li>
+              <li className="flex gap-3">
+                <span aria-hidden="true">■</span>
+                <span>発電所（ダム）建設工事の作業員らによって土木一式工事会社としてスタート</span>
+              </li>
+              <li className="flex gap-3">
+                <span aria-hidden="true">■</span>
+                <span>
+                  昭和五十五年当時には難しかった「岩盤への緑化工事」にいち早く成功し、のり面工事に特化
+                </span>
+              </li>
+              <li className="flex gap-3">
+                <span aria-hidden="true">■</span>
+                <span>平成十三年、本社を岐阜県大野町へ移転</span>
+              </li>
+              <li className="flex gap-3">
+                <span aria-hidden="true">■</span>
+                <span>従業員数：十六名（二〇二六年現在）</span>
+              </li>
             </ul>
           </div>
         </div>
