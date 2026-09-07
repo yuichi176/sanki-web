@@ -155,7 +155,7 @@ export function NorimenCraftsmanPage() {
           三気建設は、職人とただ働くだけではなく、彼らのキャリアをともに考え、ともに成長していくプランを考えています。
         </PageIntroduction>
 
-        <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4 xl:gap-4">
+        <div className="mt-6 grid gap-2 md:mt-8 md:grid-cols-2 md:gap-4 lg:mt-12 xl:grid-cols-4 xl:gap-4">
           {careerStages.map((stage, index) => (
             <article className="relative flex flex-col pt-7 xl:pt-0" key={stage.period}>
               {index < careerStages.length - 1 ? (

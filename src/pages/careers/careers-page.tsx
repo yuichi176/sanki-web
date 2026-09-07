@@ -50,7 +50,7 @@ function EnvironmentCard({ environment }: Readonly<{ environment: WorkEnvironmen
       <h3 className="mt-4 flex items-center gap-3 text-xl font-bold text-gray-800">
         <span aria-hidden="true" className="h-0.5 w-6 bg-brand" />【{environment.title}】
       </h3>
-      <ul className="mt-6 min-h-86 bg-gray-100 px-7 py-6 text-sm leading-[25px] text-gray-800">
+      <ul className="mt-6 bg-gray-100 px-7 py-6 text-sm leading-[25px] text-gray-800 md:min-h-86">
         {environment.items.map((item) => (
           <li className="flex gap-3 py-1.5" key={item}>
             <span aria-hidden="true" className="pt-0.5 text-brand">
