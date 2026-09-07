@@ -17,10 +17,7 @@ export function SoilcretePage() {
     <main>
       <section className="border-b border-gray-200">
         <div className="mx-auto max-w-7xl px-6 py-10 lg:px-10 lg:py-14">
-          <p className="text-sm leading-[18px] text-gray-600">
-            事業内容 &gt; 構造物工 &gt; ソイルクリート工法
-          </p>
-          <h1 className="mt-4 flex items-center gap-4 text-2xl leading-9 font-bold text-gray-800">
+          <h1 className="flex items-center gap-4 text-2xl leading-9 font-bold text-gray-800">
             <span aria-hidden="true" className="h-7 w-1 bg-brand" />
             ソイルクリート工法
           </h1>
