@@ -89,7 +89,7 @@ export function RockfallPreventionPage() {
             <span aria-hidden="true" className="h-7 w-1 bg-brand" />
             落石対策工
           </h1>
-          <p className="mt-3 pl-5 leading-5 text-gray-600">
+          <p className="mt-3 pl-5 text-sm leading-5 text-gray-600 lg:text-base">
             法面上の浮石・転石による落石を防止・防護する工法です。
           </p>
         </div>

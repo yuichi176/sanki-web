@@ -57,7 +57,7 @@ export function ChipMaterialSprayingPage() {
             <span aria-hidden="true" className="h-7 w-1 bg-brand" />
             チップ材吹付工
           </h1>
-          <p className="mt-3 pl-5 leading-5 text-gray-600">
+          <p className="mt-3 pl-5 text-sm leading-5 text-gray-600 lg:text-base">
             伐採木材を粉砕したチップ材を主体とした植生基材を吹き付ける工法です。
           </p>
         </div>

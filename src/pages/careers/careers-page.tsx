@@ -70,7 +70,7 @@ export function CareersPage() {
       <section className="border-b border-gray-200">
         <div className="mx-auto max-w-7xl px-6 py-10 lg:px-10 lg:py-14">
           <SectionHeading>採用情報</SectionHeading>
-          <p className="mt-3 pl-5 leading-5 text-gray-600">
+          <p className="mt-3 pl-5 text-sm leading-5 text-gray-600 lg:text-base">
             三気建設株式会社で働く仲間を募集しています。
           </p>
         </div>

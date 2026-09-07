@@ -21,7 +21,7 @@ export function SoilcretePage() {
             <span aria-hidden="true" className="h-7 w-1 bg-brand" />
             ソイルクリート工法
           </h1>
-          <p className="mt-3 pl-5 leading-5 text-gray-600">
+          <p className="mt-3 pl-5 text-sm leading-5 text-gray-600 lg:text-base">
             型枠を使用しない現場打ち法枠工法で、コスト・工期・品質に優れた効果を発揮します。
           </p>
         </div>

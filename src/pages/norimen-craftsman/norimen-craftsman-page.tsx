@@ -92,7 +92,7 @@ const careerStages: readonly CareerStage[] = [
 ]
 
 function PageIntroduction({ children }: Readonly<{ children: string }>) {
-  return <p className="mt-3 pl-5 leading-5 text-gray-600">{children}</p>
+  return <p className="mt-3 pl-5 text-sm leading-5 text-gray-600 lg:text-base">{children}</p>
 }
 
 function WorkSection({ index, workItem }: Readonly<{ index: number; workItem: WorkItem }>) {

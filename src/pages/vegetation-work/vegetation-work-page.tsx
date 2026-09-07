@@ -187,7 +187,7 @@ export function VegetationWorkPage() {
             <span aria-hidden="true" className="h-7 w-1 bg-brand" />
             植生工
           </h1>
-          <p className="mt-3 pl-5 leading-5 text-gray-600">
+          <p className="mt-3 pl-5 text-sm leading-5 text-gray-600 lg:text-base">
             植物を利用して法面を緑化・保護する工法です。
           </p>
         </div>

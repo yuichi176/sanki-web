@@ -26,7 +26,7 @@ export function VegetationSubstrateInjectionPage() {
             <span aria-hidden="true" className="h-7 w-1 bg-brand" />
             植生基材注入工法
           </h1>
-          <p className="mt-3 pl-5 leading-5 text-gray-600">
+          <p className="mt-3 pl-5 text-sm leading-5 text-gray-600 lg:text-base">
             粗目の植生袋を布設、その中に泥状化した客土、種子および肥料を注入し、法面上に生育基盤を固定する緑化工法です。
           </p>
         </div>

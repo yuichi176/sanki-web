@@ -90,7 +90,7 @@ export function ServicesPage() {
             <span aria-hidden="true" className="h-7 w-1 bg-brand" />
             事業内容
           </h1>
-          <p className="mt-3 pl-5 text-gray-600">
+          <p className="mt-3 pl-5 text-sm text-gray-600 lg:text-base">
             三気建設が手がける工事の種類・内容をご紹介します。
           </p>
         </div>
