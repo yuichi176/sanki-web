@@ -2,6 +2,8 @@ import { NavLink } from 'react-router'
 
 import { navigationItems } from '../app/navigation'
 import companyMark from '../assets/company-mark.png'
+import instagramIcon from '../assets/icons/Instagram_Glyph_Black.png'
+import tiktokIcon from '../assets/icons/TikTok-logo-RGB-Stacked-black-simplified.png'
 
 export function SiteFooter() {
   return (
@@ -24,6 +26,26 @@ export function SiteFooter() {
                 <p>〒395-2566 長野県飯田市嶋86番地</p>
                 <p>TEL: 0265-48-0553 / FAX: 0265-48-5663</p>
               </address>
+            </div>
+            <div className="mt-6 flex items-center gap-5">
+              <a
+                aria-label="Instagramを開く"
+                className="transition-opacity hover:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+                href="https://www.instagram.com/sanki.kensetsu/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <img alt="" className="size-7" height={28} src={instagramIcon} width={28} />
+              </a>
+              <a
+                aria-label="TikTokを開く"
+                className="transition-opacity hover:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+                href="https://www.tiktok.com/@sanki.kensetsu_"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <img alt="" className="size-9" height={36} src={tiktokIcon} width={36} />
+              </a>
             </div>
           </div>
           <nav aria-label="フッターナビゲーション">
