@@ -73,6 +73,16 @@ export function SiteHeader() {
                   </NavLink>
                 </li>
               ))}
+              <li>
+                <a
+                  className="border-b-2 border-transparent pb-1 text-gray-800 transition-colors hover:border-brand hover:text-brand"
+                  href="https://shushushu.jp/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  主守手
+                </a>
+              </li>
             </ul>
           </nav>
           <div className="hidden items-center gap-4 md:flex">
@@ -138,6 +148,16 @@ export function SiteHeader() {
               </NavLink>
             </li>
           ))}
+          <li className="border-b border-gray-200">
+            <a
+              className="block px-4 py-5 text-gray-800 transition-colors hover:bg-green-50 hover:text-brand"
+              href="https://shushushu.jp/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              主守手
+            </a>
+          </li>
         </ul>
         <div className="mx-auto mt-8 flex max-w-7xl items-center gap-6 px-4">
           <a

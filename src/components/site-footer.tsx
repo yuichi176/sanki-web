@@ -57,6 +57,16 @@ export function SiteFooter() {
                   </NavLink>
                 </li>
               ))}
+              <li>
+                <a
+                  className="transition-colors hover:text-brand"
+                  href="https://shushushu.jp/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  主守手
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
