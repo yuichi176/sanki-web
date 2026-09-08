@@ -50,11 +50,22 @@ export function SiteFooter() {
           </div>
           <nav aria-label="フッターナビゲーション">
             <ul className="space-y-3 text-sm text-gray-600">
-              {navigationItems.map(({ label, to }) => (
-                <li key={to}>
-                  <NavLink className="transition-colors hover:text-brand" to={to}>
-                    {label}
-                  </NavLink>
+              {navigationItems.map((item) => (
+                <li key={item.label}>
+                  {'href' in item ? (
+                    <a
+                      className="transition-colors hover:text-brand"
+                      href={item.href}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
+                    <NavLink className="transition-colors hover:text-brand" to={item.to}>
+                      {item.label}
+                    </NavLink>
+                  )}
                 </li>
               ))}
               <li>

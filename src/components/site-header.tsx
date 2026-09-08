@@ -59,18 +59,29 @@ export function SiteHeader() {
         <div className="hidden md:flex md:items-center md:gap-10">
           <nav aria-label="メインナビゲーション">
             <ul className="flex flex-wrap items-center justify-end gap-x-6 gap-y-3 text-sm font-bold lg:gap-x-8">
-              {navigationItems.map(({ label, to }) => (
-                <li key={to}>
-                  <NavLink
-                    className={({ isActive }) =>
-                      isActive
-                        ? 'border-b-2 border-brand pb-1 text-gray-800'
-                        : 'border-b-2 border-transparent pb-1 text-gray-800 transition-colors hover:border-brand hover:text-brand'
-                    }
-                    to={to}
-                  >
-                    {label}
-                  </NavLink>
+              {navigationItems.map((item) => (
+                <li key={item.label}>
+                  {'href' in item ? (
+                    <a
+                      className="border-b-2 border-transparent pb-1 text-gray-800 transition-colors hover:border-brand hover:text-brand"
+                      href={item.href}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
+                    <NavLink
+                      className={({ isActive }) =>
+                        isActive
+                          ? 'border-b-2 border-brand pb-1 text-gray-800'
+                          : 'border-b-2 border-transparent pb-1 text-gray-800 transition-colors hover:border-brand hover:text-brand'
+                      }
+                      to={item.to}
+                    >
+                      {item.label}
+                    </NavLink>
+                  )}
                 </li>
               ))}
               <li>
@@ -133,19 +144,30 @@ export function SiteHeader() {
               ホーム
             </NavLink>
           </li>
-          {navigationItems.map(({ label, to }) => (
-            <li key={to} className="border-b border-gray-200">
-              <NavLink
-                className={({ isActive }) =>
-                  isActive
-                    ? 'block bg-green-50 px-4 py-5 text-brand'
-                    : 'block px-4 py-5 text-gray-800 transition-colors hover:bg-green-50 hover:text-brand'
-                }
-                onClick={() => setIsMenuOpen(false)}
-                to={to}
-              >
-                {label}
-              </NavLink>
+          {navigationItems.map((item) => (
+            <li key={item.label} className="border-b border-gray-200">
+              {'href' in item ? (
+                <a
+                  className="block px-4 py-5 text-gray-800 transition-colors hover:bg-green-50 hover:text-brand"
+                  href={item.href}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? 'block bg-green-50 px-4 py-5 text-brand'
+                      : 'block px-4 py-5 text-gray-800 transition-colors hover:bg-green-50 hover:text-brand'
+                  }
+                  onClick={() => setIsMenuOpen(false)}
+                  to={item.to}
+                >
+                  {item.label}
+                </NavLink>
+              )}
             </li>
           ))}
           <li className="border-b border-gray-200">

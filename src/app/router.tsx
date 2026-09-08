@@ -5,7 +5,6 @@ import { CareersPage } from '../pages/careers/careers-page'
 import { ChipMaterialSprayingPage } from '../pages/chip-material-spraying/chip-material-spraying-page'
 import { CompanyPage } from '../pages/company/company-page'
 import { HomePage } from '../pages/home/home-page'
-import { NewsPage } from '../pages/news/news-page'
 import { NorimenCraftsmanPage } from '../pages/norimen-craftsman/norimen-craftsman-page'
 import { NotFoundPage } from '../pages/not-found/not-found-page'
 import { RockfallPreventionPage } from '../pages/rockfall-prevention/rockfall-prevention-page'
@@ -21,7 +20,6 @@ export const router = createBrowserRouter([
     Component: AppLayout,
     children: [
       { index: true, Component: HomePage },
-      { path: 'news', Component: NewsPage },
       { path: 'services', Component: ServicesPage },
       { path: 'rockfall-prevention', Component: RockfallPreventionPage },
       { path: 'soilcrete', Component: SoilcretePage },

@@ -1,7 +1,16 @@
-export interface NavigationItem {
+interface NavigationItemBase {
   readonly label: string
+}
+
+interface InternalNavigationItem extends NavigationItemBase {
   readonly to: string
 }
+
+interface ExternalNavigationItem extends NavigationItemBase {
+  readonly href: string
+}
+
+export type NavigationItem = InternalNavigationItem | ExternalNavigationItem
 
 export interface BreadcrumbItem {
   readonly label: string
@@ -9,7 +18,7 @@ export interface BreadcrumbItem {
 }
 
 export const navigationItems: readonly NavigationItem[] = [
-  { label: 'お知らせ', to: '/news' },
+  { label: 'お知らせ', href: 'https://note.com/sanki_kensetsu' },
   { label: '事業内容', to: '/services' },
   { label: '職人の仕事', to: '/norimen-craftsman' },
   { label: '採用情報', to: '/careers' },
@@ -22,7 +31,6 @@ const vegetationWorkBreadcrumb: BreadcrumbItem = { label: '植生工', to: '/veg
 const structuralWorkBreadcrumb: BreadcrumbItem = { label: '構造物工', to: '/structural-work' }
 
 export const breadcrumbsByPath: Readonly<Record<string, readonly BreadcrumbItem[]>> = {
-  '/news': [homeBreadcrumb, { label: 'お知らせ', to: '/news' }],
   '/services': [homeBreadcrumb, servicesBreadcrumb],
   '/vegetation-work': [homeBreadcrumb, servicesBreadcrumb, vegetationWorkBreadcrumb],
   '/structural-work': [homeBreadcrumb, servicesBreadcrumb, structuralWorkBreadcrumb],

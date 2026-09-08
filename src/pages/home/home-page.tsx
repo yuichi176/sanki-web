@@ -2,15 +2,9 @@ import { Link } from 'react-router'
 
 import arrowGreen from '../../assets/icons/arrow-green.svg'
 import arrowWhite from '../../assets/icons/arrow-white.svg'
-import imagePlaceholder from '../../assets/icons/image-placeholder.svg'
 import heroImage1368 from './assets/hero-1368.webp'
 import heroImage2048 from './assets/hero-2048.webp'
 import heroImage768 from './assets/hero-768.webp'
-
-interface NewsItem {
-  readonly date: string
-  readonly title: string
-}
 
 interface ServiceItem {
   readonly description: string
@@ -18,11 +12,10 @@ interface ServiceItem {
   readonly title: string
 }
 
-const newsItems: readonly NewsItem[] = [
-  { date: '2024年03月15日', title: '新しい建設プロジェクトの受注について' },
-  { date: '2024年02月28日', title: '岐阜県大野町エリアの施工実績更新' },
-  { date: '2024年02月10日', title: '職人採用説明会のご案内' },
-  { date: '2024年01月20日', title: '年末年始の休業日のお知らせ' },
+const featuredNoteUrls: readonly string[] = [
+  'https://note.com/embed/notes/nf3d6092d8528',
+  'https://note.com/embed/notes/ncda7325b840b',
+  'https://note.com/embed/notes/nf6e82d7aadda',
 ]
 
 const serviceItems: readonly ServiceItem[] = [
@@ -45,17 +38,30 @@ const serviceItems: readonly ServiceItem[] = [
 
 interface SectionHeadingProps {
   readonly children: string
-  readonly moreTo: string
+  readonly moreHref?: string
+  readonly moreTo?: string
 }
 
-function SectionHeading({ children, moreTo }: SectionHeadingProps) {
+function SectionHeading({ children, moreHref, moreTo }: SectionHeadingProps) {
   return (
     <div className="flex items-center justify-between gap-6">
       <h2 className="border-l-4 border-brand pl-4 text-2xl font-bold text-gray-800">{children}</h2>
-      <Link className="flex items-center gap-1.5 text-sm text-brand hover:underline" to={moreTo}>
-        もっと見る
-        <img alt="" className="size-3.5" height={14} src={arrowGreen} width={14} />
-      </Link>
+      {moreHref ? (
+        <a
+          className="flex items-center gap-1.5 text-sm text-brand hover:underline"
+          href={moreHref}
+          rel="noreferrer"
+          target="_blank"
+        >
+          noteのお知らせ一覧を見る
+          <img alt="" className="size-3.5" height={14} src={arrowGreen} width={14} />
+        </a>
+      ) : (
+        <Link className="flex items-center gap-1.5 text-sm text-brand hover:underline" to={moreTo!}>
+          もっと見る
+          <img alt="" className="size-3.5" height={14} src={arrowGreen} width={14} />
+        </Link>
+      )}
     </div>
   )
 }
@@ -94,18 +100,24 @@ export function HomePage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
-        <SectionHeading moreTo="/news">お知らせ</SectionHeading>
-        <div className="mt-10 grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
-          {newsItems.map(({ date, title }) => (
-            <article key={title}>
-              <div className="flex aspect-[1.6] items-center justify-center bg-green-100">
-                <img alt="" className="size-12" height={48} src={imagePlaceholder} width={48} />
-              </div>
-              <time className="mt-4 block text-xs text-gray-600">{date}</time>
-              <h3 className="mt-2 text-[15px] leading-6 font-bold text-gray-800">{title}</h3>
-            </article>
+        <SectionHeading moreHref="https://note.com/sanki_kensetsu">お知らせ</SectionHeading>
+        <p className="mt-5 text-sm leading-7 text-gray-600">
+          三気建設の取り組みや施工に関する情報をnoteで発信しています。
+        </p>
+        <div className="mt-8 grid gap-7 md:grid-cols-2 xl:grid-cols-3">
+          {featuredNoteUrls.map((url, index) => (
+            <iframe
+              // eslint-disable-next-line tailwindcss/no-custom-classname -- Required by note's embed script.
+              className="note-embed block w-full max-w-full"
+              height="220"
+              key={url}
+              loading="lazy"
+              src={url}
+              title={`注目のお知らせ ${index + 1}`}
+            />
           ))}
         </div>
+        <script async charSet="utf-8" src="https://note.com/scripts/embed.js" />
       </section>
 
       <section className="bg-green-100">
