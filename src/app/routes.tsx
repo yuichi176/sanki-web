@@ -15,6 +15,26 @@ import { StructuralWorkPage } from '../pages/structural-work/structural-work-pag
 import { VegetationSubstrateInjectionPage } from '../pages/vegetation-substrate-injection/vegetation-substrate-injection-page'
 import { VegetationWorkPage } from '../pages/vegetation-work/vegetation-work-page'
 
+export interface PrerenderedPage {
+  readonly pathname: string
+  readonly title: string
+}
+
+export const prerenderedPages: readonly PrerenderedPage[] = [
+  { pathname: '/', title: '三気建設株式会社' },
+  { pathname: '/services/', title: '事業内容 | 三気建設株式会社' },
+  { pathname: '/rockfall-prevention/', title: '落石対策工 | 三気建設株式会社' },
+  { pathname: '/soilcrete/', title: 'ソイルクリート工法 | 三気建設株式会社' },
+  { pathname: '/slope-repair/', title: '既設法面補修工 | 三気建設株式会社' },
+  { pathname: '/structural-work/', title: '構造物工 | 三気建設株式会社' },
+  { pathname: '/vegetation-work/', title: '植生工 | 三気建設株式会社' },
+  { pathname: '/chip-material-spraying/', title: 'チップ材吹付工 | 三気建設株式会社' },
+  { pathname: '/vegetation-substrate-injection/', title: '植生基材注入工法 | 三気建設株式会社' },
+  { pathname: '/norimen-craftsman/', title: '職人の仕事 | 三気建設株式会社' },
+  { pathname: '/careers/', title: '採用情報 | 三気建設株式会社' },
+  { pathname: '/company/', title: '会社概要 | 三気建設株式会社' },
+]
+
 export const routes: RouteObject[] = [
   {
     Component: AppLayout,
