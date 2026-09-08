@@ -1,11 +1,18 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 import { RouterProvider } from 'react-router'
 import './index.css'
 import { router } from './app/router'
 
-createRoot(document.getElementById('root')!).render(
+const app = (
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>,
+  </StrictMode>
 )
+const root = document.getElementById('root')!
+
+if (import.meta.env.PROD) {
+  hydrateRoot(root, app)
+} else {
+  createRoot(root).render(app)
+}

@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && vite build --ssr src/entry-server.tsx --outDir .ssr && node scripts/prerender.mjs",
     "preview": "vite preview",
     "lint": "eslint 'src/**/*.{js,ts,jsx,tsx}' --cache",
     "lint:fix": "eslint 'src/**/*.{js,ts,jsx,tsx}' --fix --cache",
