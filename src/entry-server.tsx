@@ -12,7 +12,8 @@ export async function renderPage({ pathname, title }: PrerenderedPage): Promise<
 }> {
   const basePath = import.meta.env.BASE_URL
   const { dataRoutes, query } = createStaticHandler(routes, { basename: basePath })
-  const context = await query(new Request(`https://sanki-web.example${basePath}${pathname}`))
+  const routePath = pathname === '/' ? '' : pathname.slice(1)
+  const context = await query(new Request(`https://sanki-web.example${basePath}${routePath}`))
 
   if (context instanceof Response) {
     throw new Error(`Unable to render ${pathname}: ${context.status} ${context.statusText}`)
