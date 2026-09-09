@@ -28,6 +28,7 @@ const workEnvironments: readonly WorkEnvironment[] = [
       '各種社会保険制度加入',
       'マイカー通勤可、社用車の貸し出し可',
       '社宅提供あり（費用は要相談）',
+      '研修、メンター制度あり',
     ],
   },
   {

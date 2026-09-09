@@ -45,19 +45,13 @@ const workItems: readonly WorkItem[] = [
     title: '現場資料作成',
     images: [craftsman5Image, craftsman6Image],
     imageColumns: [1, 1],
-    description: [
-      '工事が終わると、工事についての内容などを報告書にまとめます。',
-      '正確な記録を残すことで、次の現場へのノウハウを積み重ねます。',
-    ],
+    description: ['工事が終わると、工事についての内容などを報告書にまとめます。'],
   },
   {
     title: '機械整備',
     images: [craftsman7Image, craftsman8Image],
     imageColumns: [3, 2],
-    description: [
-      '工事後や、天候不良時で現場作業が出来ない時は倉庫で機械の整備を行います。',
-      '道具を大切に扱うことも、職人として大切な仕事です。',
-    ],
+    description: ['工事後や、天候不良時で現場作業が出来ない時は倉庫で機械の整備を行います。'],
   },
 ]
 
