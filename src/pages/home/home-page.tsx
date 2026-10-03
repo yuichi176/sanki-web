@@ -13,8 +13,8 @@ interface ServiceItem {
 }
 
 const featuredNoteUrls: readonly string[] = [
+  'https://note.com/embed/notes/nf6877cc62c94',
   'https://note.com/embed/notes/nf3d6092d8528',
-  'https://note.com/embed/notes/ncda7325b840b',
   'https://note.com/embed/notes/nf6e82d7aadda',
 ]
 
